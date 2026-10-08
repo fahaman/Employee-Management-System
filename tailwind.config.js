@@ -7,15 +7,18 @@ export default {
   theme: {
     extend: {
       colors: {
-        darkBg: '#092328',
-        cardBg: '#12544F',
-        brandGreen: '#247B62',
-        lightMint: '#85BB92',
+        creamBg: '#FFFAD3',
+        peachLight: '#FFDBB0',
+        peachMedium: '#FFCCB8',
+        coralPink: '#FFB1B1',
+        textDark: '#4A2E2B',
+        textMuted: '#8C5A55',
       }
     },
   },
   plugins: [],
 }
+
 
 
 

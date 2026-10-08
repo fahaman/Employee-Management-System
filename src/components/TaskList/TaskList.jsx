@@ -9,7 +9,7 @@ const TaskList = ({ data, onTaskAction }) => {
 
     if (!data || !data.tasks || data.tasks.length === 0) {
         return (
-            <div className='p-8 bg-[#12544F]/50 rounded-2xl border border-[#247B62]/30 text-center text-[#85BB92] text-sm'>
+            <div className='p-8 bg-white/80 rounded-2xl border border-[#FFCCB8] text-center text-[#8C5A55] text-sm font-semibold shadow-sm'>
                 No tasks assigned yet.
             </div>
         )
@@ -26,17 +26,17 @@ const TaskList = ({ data, onTaskAction }) => {
     return (
         <div className='w-full'>
             {/* Filter Tabs */}
-            <div className='flex flex-wrap items-center justify-between gap-3 mb-6 pb-2 border-b border-[#247B62]/30'>
-                <h3 className='text-lg font-bold text-[#e2f1e7]'>Assigned Tasks</h3>
-                <div className='flex flex-wrap gap-1.5 bg-[#092328] p-1.5 rounded-xl border border-[#247B62]/40'>
+            <div className='flex flex-wrap items-center justify-between gap-3 mb-6 pb-2 border-b border-[#FFCCB8]'>
+                <h3 className='text-lg font-extrabold text-[#4A2E2B]'>Assigned Tasks</h3>
+                <div className='flex flex-wrap gap-1.5 bg-[#FFFAD3] p-1.5 rounded-xl border border-[#FFCCB8] shadow-sm'>
                     {['all', 'new', 'active', 'completed', 'failed'].map((tab) => (
                         <button
                             key={tab}
                             onClick={() => setActiveTab(tab)}
-                            className={`px-3 py-1.5 text-xs font-semibold rounded-lg capitalize transition-all duration-150 cursor-pointer ${
+                            className={`px-3 py-1.5 text-xs font-bold rounded-lg capitalize transition-all duration-150 cursor-pointer ${
                                 activeTab === tab
-                                    ? 'bg-[#247B62] text-[#e2f1e7] shadow-sm border border-[#85BB92]/30'
-                                    : 'text-[#85BB92] hover:text-[#e2f1e7] hover:bg-[#12544F]'
+                                    ? 'bg-[#FFB1B1] text-[#4A2E2B] shadow-sm border border-[#FFCCB8]'
+                                    : 'text-[#8C5A55] hover:text-[#4A2E2B] hover:bg-[#FFDBB0]/40'
                             }`}
                         >
                             {tab}
@@ -67,13 +67,14 @@ const TaskList = ({ data, onTaskAction }) => {
                         return null
                     })
                 ) : (
-                    <div className='w-full py-12 text-center text-[#85BB92] text-sm bg-[#12544F]/40 rounded-2xl border border-[#247B62]/30'>
+                    <div className='w-full py-12 text-center text-[#8C5A55] font-semibold text-sm bg-white/80 rounded-2xl border border-[#FFCCB8] shadow-sm'>
                         No tasks found under &quot;{activeTab}&quot; category.
                     </div>
                 )}
             </div>
         </div>
     )
+
 
 }
 

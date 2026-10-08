@@ -60,14 +60,14 @@ const CreateTask = () => {
     }
 
     return (
-        <div className='p-6 sm:p-8 bg-[#12544F]/90 backdrop-blur-md rounded-2xl border border-[#247B62]/40 shadow-xl mb-8'>
-            <div className='flex items-center justify-between mb-6 pb-4 border-b border-[#247B62]/30'>
+        <div className='p-6 sm:p-8 bg-white/90 backdrop-blur-md rounded-2xl border border-[#FFCCB8] shadow-md mb-8'>
+            <div className='flex items-center justify-between mb-6 pb-4 border-b border-[#FFCCB8]'>
                 <div>
-                    <h2 className='text-xl sm:text-2xl font-bold text-[#e2f1e7]'>Create New Task</h2>
-                    <p className='text-xs sm:text-sm text-[#85BB92]'>Assign tasks to your team members</p>
+                    <h2 className='text-xl sm:text-2xl font-extrabold text-[#4A2E2B]'>Create New Task</h2>
+                    <p className='text-xs sm:text-sm text-[#8C5A55] font-medium'>Assign tasks to your team members</p>
                 </div>
                 {message.text && (
-                    <div className={`px-4 py-2 rounded-xl text-xs font-semibold animate-pulse ${message.type === 'success' ? 'bg-[#247B62] text-[#e2f1e7]' : 'bg-rose-500/80 text-white'}`}>
+                    <div className={`px-4 py-2 rounded-xl text-xs font-bold animate-pulse ${message.type === 'success' ? 'bg-emerald-100 text-emerald-800 border border-emerald-300' : 'bg-rose-100 text-rose-800 border border-rose-300'}`}>
                         {message.text}
                     </div>
                 )}
@@ -77,12 +77,12 @@ const CreateTask = () => {
                 {/* Left Column - Meta details */}
                 <div className='w-full lg:w-1/2 flex flex-col gap-4'>
                     <div>
-                        <label className='block text-xs font-semibold text-[#85BB92] uppercase tracking-wider mb-1.5'>Task Title</label>
+                        <label className='block text-xs font-bold text-[#8C5A55] uppercase tracking-wider mb-1.5'>Task Title</label>
                         <input
                             value={taskTitle}
                             onChange={(e) => setTaskTitle(e.target.value)}
                             required
-                            className='w-full text-sm py-2.5 px-4 rounded-xl outline-none bg-[#092328]/90 border border-[#247B62]/50 text-[#e2f1e7] focus:border-[#85BB92] placeholder:text-[#85BB92]/50 transition-colors'
+                            className='w-full text-sm py-2.5 px-4 rounded-xl outline-none bg-[#FFFAD3]/60 border border-[#FFCCB8] text-[#4A2E2B] focus:border-[#FFB1B1] placeholder:text-[#8C5A55]/50 transition-colors shadow-sm font-semibold'
                             type="text" 
                             placeholder='e.g., Revamp User Dashboard UI'
                         />
@@ -90,26 +90,26 @@ const CreateTask = () => {
 
                     <div className='grid grid-cols-1 sm:grid-cols-2 gap-4'>
                         <div>
-                            <label className='block text-xs font-semibold text-[#85BB92] uppercase tracking-wider mb-1.5'>Due Date</label>
+                            <label className='block text-xs font-bold text-[#8C5A55] uppercase tracking-wider mb-1.5'>Due Date</label>
                             <input
                                 value={taskDate}
                                 onChange={(e) => setTaskDate(e.target.value)}
                                 required
-                                className='w-full text-sm py-2.5 px-4 rounded-xl outline-none bg-[#092328]/90 border border-[#247B62]/50 text-[#e2f1e7] focus:border-[#85BB92] transition-colors' 
+                                className='w-full text-sm py-2.5 px-4 rounded-xl outline-none bg-[#FFFAD3]/60 border border-[#FFCCB8] text-[#4A2E2B] focus:border-[#FFB1B1] transition-colors shadow-sm font-semibold' 
                                 type="date" 
                             />
                         </div>
                         <div>
-                            <label className='block text-xs font-semibold text-[#85BB92] uppercase tracking-wider mb-1.5'>Assign To</label>
+                            <label className='block text-xs font-bold text-[#8C5A55] uppercase tracking-wider mb-1.5'>Assign To</label>
                             <select
                                 value={asignTo}
                                 onChange={(e) => setAsignTo(e.target.value)}
                                 required
-                                className='w-full text-sm py-2.5 px-4 rounded-xl outline-none bg-[#092328]/90 border border-[#247B62]/50 text-[#e2f1e7] focus:border-[#85BB92] transition-colors cursor-pointer'
+                                className='w-full text-sm py-2.5 px-4 rounded-xl outline-none bg-[#FFFAD3]/60 border border-[#FFCCB8] text-[#4A2E2B] focus:border-[#FFB1B1] transition-colors cursor-pointer shadow-sm font-semibold'
                             >
-                                <option value="" disabled className='text-[#85BB92]/50'>Select Employee</option>
+                                <option value="" disabled className='text-[#8C5A55]/50'>Select Employee</option>
                                 {userData && userData.map((emp) => (
-                                    <option key={emp.id} value={emp.firstName} className='bg-[#092328] text-[#e2f1e7]'>
+                                    <option key={emp.id} value={emp.firstName} className='bg-[#FFFAD3] text-[#4A2E2B]'>
                                         {emp.firstName} ({emp.email})
                                     </option>
                                 ))}
@@ -118,12 +118,12 @@ const CreateTask = () => {
                     </div>
 
                     <div>
-                        <label className='block text-xs font-semibold text-[#85BB92] uppercase tracking-wider mb-1.5'>Category</label>
+                        <label className='block text-xs font-bold text-[#8C5A55] uppercase tracking-wider mb-1.5'>Category</label>
                         <input
                             value={category}
                             onChange={(e) => setCategory(e.target.value)}
                             required
-                            className='w-full text-sm py-2.5 px-4 rounded-xl outline-none bg-[#092328]/90 border border-[#247B62]/50 text-[#e2f1e7] focus:border-[#85BB92] placeholder:text-[#85BB92]/50 transition-colors' 
+                            className='w-full text-sm py-2.5 px-4 rounded-xl outline-none bg-[#FFFAD3]/60 border border-[#FFCCB8] text-[#4A2E2B] focus:border-[#FFB1B1] placeholder:text-[#8C5A55]/50 transition-colors shadow-sm font-semibold' 
                             type="text" 
                             placeholder='e.g., Design, Dev, QA, Marketing' 
                         />
@@ -133,22 +133,22 @@ const CreateTask = () => {
                 {/* Right Column - Description & Action */}
                 <div className='w-full lg:w-1/2 flex flex-col justify-between gap-4'>
                     <div className='flex-1 flex flex-col'>
-                        <label className='block text-xs font-semibold text-[#85BB92] uppercase tracking-wider mb-1.5'>Task Description</label>
+                        <label className='block text-xs font-bold text-[#8C5A55] uppercase tracking-wider mb-1.5'>Task Description</label>
                         <textarea 
                             value={taskDescription}
                             onChange={(e) => setTaskDescription(e.target.value)}
                             required
                             placeholder='Provide detailed instructions or requirements for this task...'
-                            className='w-full flex-1 min-h-[140px] text-sm py-3 px-4 rounded-xl outline-none bg-[#092328]/90 border border-[#247B62]/50 text-[#e2f1e7] focus:border-[#85BB92] placeholder:text-[#85BB92]/50 transition-colors resize-none' 
+                            className='w-full flex-1 min-h-[140px] text-sm py-3 px-4 rounded-xl outline-none bg-[#FFFAD3]/60 border border-[#FFCCB8] text-[#4A2E2B] focus:border-[#FFB1B1] placeholder:text-[#8C5A55]/50 transition-colors resize-none shadow-sm font-semibold' 
                         />
                     </div>
 
                     <button 
                         type="submit"
-                        className='bg-[#247B62] hover:bg-[#247B62]/90 active:scale-[0.99] text-[#e2f1e7] font-bold text-base py-3 px-6 rounded-xl transition-all duration-200 shadow-md shadow-[#247B62]/30 flex items-center justify-center gap-2 cursor-pointer border border-[#85BB92]/30'
+                        className='bg-[#FFB1B1] hover:bg-[#FFB1B1]/90 active:scale-[0.99] text-[#4A2E2B] font-extrabold text-base py-3 px-6 rounded-xl transition-all duration-200 shadow-md flex items-center justify-center gap-2 cursor-pointer border border-[#FFCCB8]'
                     >
                         <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
                         </svg>
                         <span>Assign Task</span>
                     </button>
@@ -156,6 +156,7 @@ const CreateTask = () => {
             </form>
         </div>
     )
+
 
 }
 

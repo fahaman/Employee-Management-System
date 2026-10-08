@@ -6,7 +6,7 @@
 
 :root {
   font-family: 'Outfit', sans-serif;
-  color-scheme: dark;
+  color-scheme: light;
 }
 
 * {
@@ -16,8 +16,8 @@
 }
 
 body {
-  background-color: #092328;
-  color: #e2f1e7;
+  background-color: #FFFAD3;
+  color: #4A2E2B;
   min-height: 100vh;
   overflow-x: hidden;
 }
@@ -29,14 +29,14 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: #06191d;
+  background: #FFFAD3;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #247B62;
+  background: #FFB1B1;
   border-radius: 9999px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #85BB92;
+  background: #FFCCB8;
 }
