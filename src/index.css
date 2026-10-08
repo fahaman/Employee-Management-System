@@ -16,8 +16,8 @@
 }
 
 body {
-  background-color: #0e2f44;
-  color: #d6cbc4;
+  background-color: #092328;
+  color: #e2f1e7;
   min-height: 100vh;
   overflow-x: hidden;
 }
@@ -29,14 +29,14 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: #081c29;
+  background: #06191d;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #407294;
+  background: #247B62;
   border-radius: 9999px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #a29890;
+  background: #85BB92;
 }

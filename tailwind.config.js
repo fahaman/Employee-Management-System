@@ -7,19 +7,15 @@ export default {
   theme: {
     extend: {
       colors: {
-        palette: {
-          taupe: '#a29890',
-          sand: '#cbbeb5',
-          cream: '#d6cbc4',
-          blue: '#407294',
-          navy: '#0e2f44',
-          navyLight: '#143d57',
-          navyDark: '#081c29',
-        }
+        darkBg: '#092328',
+        cardBg: '#12544F',
+        brandGreen: '#247B62',
+        lightMint: '#85BB92',
       }
     },
   },
   plugins: [],
 }
+
 
 
