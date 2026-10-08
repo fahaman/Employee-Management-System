@@ -8,18 +8,18 @@ const AdminDashboard = (props) => {
     const [activeSection, setActiveSection] = useState('create')
 
     return (
-        <div className='min-h-screen w-full p-4 sm:p-8 lg:p-10 bg-[#0e2f44] text-[#d6cbc4]'>
+        <div className='min-h-screen w-full p-4 sm:p-8 lg:p-10 bg-[#092328] text-[#e2f1e7]'>
             <div className='max-w-7xl mx-auto'>
                 <Header changeUser={props.changeUser} />
 
                 {/* Admin Navigation Tabs */}
-                <div className='flex flex-wrap items-center gap-2 mb-6 bg-[#143d57]/60 p-2 rounded-2xl border border-[#407294]/30 backdrop-blur-md'>
+                <div className='flex flex-wrap items-center gap-2 mb-6 bg-[#12544F]/60 p-2 rounded-2xl border border-[#247B62]/30 backdrop-blur-md'>
                     <button
                         onClick={() => setActiveSection('create')}
                         className={`flex items-center gap-2 px-5 py-2.5 rounded-xl font-semibold text-xs sm:text-sm transition-all duration-200 cursor-pointer ${
                             activeSection === 'create'
-                                ? 'bg-[#407294] text-[#d6cbc4] shadow-md shadow-[#407294]/30'
-                                : 'text-[#cbbeb5] hover:text-[#d6cbc4] hover:bg-[#143d57]'
+                                ? 'bg-[#247B62] text-[#e2f1e7] shadow-md shadow-[#247B62]/30 border border-[#85BB92]/40'
+                                : 'text-[#85BB92] hover:text-[#e2f1e7] hover:bg-[#12544F]'
                         }`}
                     >
                         <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -32,8 +32,8 @@ const AdminDashboard = (props) => {
                         onClick={() => setActiveSection('register')}
                         className={`flex items-center gap-2 px-5 py-2.5 rounded-xl font-semibold text-xs sm:text-sm transition-all duration-200 cursor-pointer ${
                             activeSection === 'register'
-                                ? 'bg-[#a29890] text-[#0e2f44] shadow-md'
-                                : 'text-[#cbbeb5] hover:text-[#d6cbc4] hover:bg-[#143d57]'
+                                ? 'bg-[#85BB92] text-[#092328] font-bold shadow-md'
+                                : 'text-[#85BB92] hover:text-[#e2f1e7] hover:bg-[#12544F]'
                         }`}
                     >
                         <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">

@@ -56,13 +56,14 @@ const EmployeeDashboard = (props) => {
   }
 
   return (
-    <div className='min-h-screen w-full p-4 sm:p-8 lg:p-10 bg-[#0e2f44] text-[#d6cbc4]'>
+    <div className='min-h-screen w-full p-4 sm:p-8 lg:p-10 bg-[#092328] text-[#e2f1e7]'>
       <div className='max-w-7xl mx-auto'>
         <Header changeUser={props.changeUser} data={currentEmployee} />
         <TaskListNumbers data={currentEmployee} />
         <TaskList data={currentEmployee} onTaskAction={handleTaskAction} />
       </div>
     </div>
+
   )
 }
 

@@ -47,14 +47,14 @@ const RegisterEmployee = () => {
     }
 
     return (
-        <div className='p-6 sm:p-8 bg-[#143d57]/80 backdrop-blur-md rounded-2xl border border-[#407294]/30 shadow-xl mb-8'>
-            <div className='flex items-center justify-between mb-6 pb-4 border-b border-[#407294]/30'>
+        <div className='p-6 sm:p-8 bg-[#12544F]/90 backdrop-blur-md rounded-2xl border border-[#247B62]/40 shadow-xl mb-8'>
+            <div className='flex items-center justify-between mb-6 pb-4 border-b border-[#247B62]/30'>
                 <div>
-                    <h2 className='text-xl sm:text-2xl font-bold text-[#d6cbc4]'>Register New Employee</h2>
-                    <p className='text-xs sm:text-sm text-[#cbbeb5]'>Add a new team member to your organization portal</p>
+                    <h2 className='text-xl sm:text-2xl font-bold text-[#e2f1e7]'>Register New Employee</h2>
+                    <p className='text-xs sm:text-sm text-[#85BB92]'>Add a new team member to your organization portal</p>
                 </div>
                 {message.text && (
-                    <div className={`px-4 py-2 rounded-xl text-xs font-semibold animate-pulse ${message.type === 'success' ? 'bg-[#407294] text-[#d6cbc4]' : 'bg-rose-500/80 text-white'}`}>
+                    <div className={`px-4 py-2 rounded-xl text-xs font-semibold animate-pulse ${message.type === 'success' ? 'bg-[#247B62] text-[#e2f1e7]' : 'bg-rose-500/80 text-white'}`}>
                         {message.text}
                     </div>
                 )}
@@ -62,45 +62,45 @@ const RegisterEmployee = () => {
 
             <form onSubmit={handleSubmit} className='grid grid-cols-1 sm:grid-cols-3 gap-5 items-end'>
                 <div>
-                    <label className='block text-xs font-semibold text-[#cbbeb5] uppercase tracking-wider mb-1.5'>First Name</label>
+                    <label className='block text-xs font-semibold text-[#85BB92] uppercase tracking-wider mb-1.5'>First Name</label>
                     <input
                         type="text"
                         value={firstName}
                         onChange={(e) => setFirstName(e.target.value)}
                         required
                         placeholder='e.g., Alex'
-                        className='w-full text-sm py-2.5 px-4 rounded-xl outline-none bg-[#0e2f44] border border-[#407294]/40 text-[#d6cbc4] focus:border-[#d6cbc4] placeholder:text-[#a29890] transition-colors'
+                        className='w-full text-sm py-2.5 px-4 rounded-xl outline-none bg-[#092328]/90 border border-[#247B62]/50 text-[#e2f1e7] focus:border-[#85BB92] placeholder:text-[#85BB92]/50 transition-colors'
                     />
                 </div>
 
                 <div>
-                    <label className='block text-xs font-semibold text-[#cbbeb5] uppercase tracking-wider mb-1.5'>Email Address</label>
+                    <label className='block text-xs font-semibold text-[#85BB92] uppercase tracking-wider mb-1.5'>Email Address</label>
                     <input
                         type="email"
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
                         required
                         placeholder='e.g., alex@company.com'
-                        className='w-full text-sm py-2.5 px-4 rounded-xl outline-none bg-[#0e2f44] border border-[#407294]/40 text-[#d6cbc4] focus:border-[#d6cbc4] placeholder:text-[#a29890] transition-colors'
+                        className='w-full text-sm py-2.5 px-4 rounded-xl outline-none bg-[#092328]/90 border border-[#247B62]/50 text-[#e2f1e7] focus:border-[#85BB92] placeholder:text-[#85BB92]/50 transition-colors'
                     />
                 </div>
 
                 <div>
-                    <label className='block text-xs font-semibold text-[#cbbeb5] uppercase tracking-wider mb-1.5'>Password</label>
+                    <label className='block text-xs font-semibold text-[#85BB92] uppercase tracking-wider mb-1.5'>Password</label>
                     <input
                         type="password"
                         value={password}
                         onChange={(e) => setPassword(e.target.value)}
                         required
                         placeholder='Enter password'
-                        className='w-full text-sm py-2.5 px-4 rounded-xl outline-none bg-[#0e2f44] border border-[#407294]/40 text-[#d6cbc4] focus:border-[#d6cbc4] placeholder:text-[#a29890] transition-colors'
+                        className='w-full text-sm py-2.5 px-4 rounded-xl outline-none bg-[#092328]/90 border border-[#247B62]/50 text-[#e2f1e7] focus:border-[#85BB92] placeholder:text-[#85BB92]/50 transition-colors'
                     />
                 </div>
 
                 <div className='sm:col-span-3 flex justify-end mt-2'>
                     <button
                         type="submit"
-                        className='w-full sm:w-auto bg-[#a29890] hover:bg-[#a29890]/80 active:scale-[0.99] text-[#0e2f44] font-bold text-sm py-2.5 px-6 rounded-xl transition-all duration-200 shadow-md flex items-center justify-center gap-2 cursor-pointer'
+                        className='w-full sm:w-auto bg-[#85BB92] hover:bg-[#85BB92]/90 active:scale-[0.99] text-[#092328] font-bold text-sm py-2.5 px-6 rounded-xl transition-all duration-200 shadow-md flex items-center justify-center gap-2 cursor-pointer border border-[#85BB92]/50'
                     >
                         <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z" />
@@ -111,6 +111,7 @@ const RegisterEmployee = () => {
             </form>
         </div>
     )
+
 }
 
 export default RegisterEmployee
